@@ -1,25 +1,160 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+li {
+  list-style: none;
+}
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+p {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2E2F42;
+}
+
+.gallery-info {
+  font-family: Montserrat;
+  font-size: 12px;
   font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2E2F42;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+input {
+  width: 255px;
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  outline: none;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+input:hover{
+  border: 1px solid #000000;
+}
+
+input:focus{
+  border: 1px solid #4E75FF;
+}
+
+button {
+  width: 91px;
+  height: 40px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  background-color:#4E75FF;
+  color: #FFF;
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  border: none;
+}
+
+button:hover {
+  background: #6C8CFF;
+
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-elem {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  margin-top: 36px;
+  gap: 8px;
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  width: 360px;
+  height: auto;
+  border: 1px solid #808080;
+  
+}
+
+img {
+  display: block;
+  width: 360px;
+  height: 240px;
+}
+
+.modal-info {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.sl-wrapper {
+  background-color:#2E2F42CC;
+}
+
+.loader{
+  font-size: 48px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+
+.loader:after{
+  content: 'Loading';
+  position: relative;
+  z-index: 5;
+}
+
+.loader:before{
+  content: '';
+  height: 6px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background: linear-gradient(#FF3D00 100%, transparent 0) no-repeat;
+  background-size: 0% auto;
+  animation: 10s lineGrow linear infinite;
+}
+
+.loader-block {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  width: 175px;
+  height: 32px;
+  flex-direction: column-reverse;
+}
+
+@keyframes lineGrow {to {  background-size: 100% auto}}
+
+.hidden {
+  /* visibility: hidden; */
+  display: none;
 }
