@@ -22,7 +22,7 @@ function loaderOff() {
 
 refs.formElem.addEventListener('submit', (e) => {
     e.preventDefault();
-    refs.gallery.inserHTML = "";
+    refs.gallery.innerHTML = "";
     const searchImg = refs.formInput.value.trim();
     if (searchImg === "" ){
         return iziToast.show({
